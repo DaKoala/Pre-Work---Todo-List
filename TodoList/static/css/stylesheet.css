@@ -1,0 +1,24 @@
+h1 {
+    color: #1b6d85;
+}
+
+.date_form {
+    color: #000;
+    font-size: 5px;
+    border: 1px dashed #a669ff;
+}
+
+.content_form {
+    color: #000;
+    font-size: 5px;
+    border: 1px dashed #a669ff;
+    resize: none;
+}
+
+.submit_form {
+    position: relative;
+    left: 9%;
+    border: 1.5px dashed #a669ff;
+    background-color: #FFF;
+    border-radius: 10%;
+}

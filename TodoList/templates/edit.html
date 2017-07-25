@@ -1,0 +1,105 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToBeDone | 编辑待办事项</title>
+    <link href="{% static "css/stylesheet.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .container {
+            position: relative;
+            padding: 2em;
+            left: 35%;
+            margin: 2em;
+            background-color: white;
+            width: 25%;
+            height: 48em;
+        }
+
+        .header {
+            background-color: #00affa;
+            box-shadow: 3px 3px 3px #888;
+            width: 100%;
+            height: 4em;
+        }
+
+        .header_name {
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            top: 0.4em;
+            left: 5em;
+            color: white;
+        }
+
+        .header .btn-primary {
+            position: relative;
+            margin: 0;
+            left: -8em;
+            top: 0.4em;
+            background-color: #00affa;
+            border: none;
+        }
+
+        .content_form {
+            resize: none;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .4);
+            outline: none;
+            margin: 0 0;
+        }
+
+        .date_form {
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, .4);
+            outline: none;
+            margin: 0 0;
+        }
+
+        .item {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2 class="header_name">ToBeDone</h2>
+        <button type="button" class="btn btn-primary" onclick=window.location.href='..'>《返回首页</button>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+        {% csrf_token %}
+        <div>
+            <p class="item">日期(请按YYYY-MM-DD格式填写)</p>
+            {{ form.date }}
+        </div>
+        <br>
+        <div style="margin-top: 5px">
+            <p class="item">内容</p>
+            {{ form.content }}
+        </div>
+        <br>
+        <div>
+            <p class="item">优先级</p>
+            {{ form.prior }}
+        </div>
+        <br>
+        <div>
+            <p class="item">过期时间(请按YYYY-MM-DD格式填写)</p>
+            {{ form.expire_date }}
+        </div>
+        <br>
+        <div>
+            <p class="item">是否完成</p>
+            {{ form.is_finished }}
+        </div>
+        <input class="btn-success" type="submit" value="修改完成" style="position: relative; left: 17%; margin: 1em; padding: 0.5em 5em 0.5em 5em; border:none; border-radius: 5%;"/>
+    </form>
+    </div>
+</body>
+</html>

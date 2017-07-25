@@ -1,0 +1,108 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToBeDone</title>
+    <script src="{% static "js/bootstrap.js" %}"></script>
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+
+        .header {
+            background-color: #00affa;
+            box-shadow: 3px 3px 3px #888;
+            width: 100%;
+            height: 4em;
+        }
+
+        .header_name {
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            top: 0.4em;
+            left: 5em;
+            color: white;
+        }
+
+        .container {
+            position: relative;
+            padding: 2em;
+            left: 25%;
+        }
+
+        .header .btn-success {
+            position: relative;
+            margin: 0;
+            left: calc(50% - 12em);
+            top: 0.3em;
+            padding: 0.1em 3em 0.1em 3em;
+            font-size: 25px;
+        }
+
+        body > .container {
+            margin: 2em;
+            background-color: white;
+            width: 50%;
+        }
+
+        .badge {
+            background-color: red;
+            margin-right: 0.2em;
+        }
+
+        .nav-pills {
+            position: relative;
+            top: 1em;
+            left: 39%;
+        }
+
+        .nav-pills > li > a:hover {
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2 class="header_name">ToBeDone</h2>
+        <button type="button" class="btn btn-success" onclick=window.location.href='add.html/'>添加待办事项</button>
+    </div>
+    <ul class="nav nav-pills">
+	    <li><a href="..">一周事项</a></li>
+	    <li><a href="../list_all.html">全部事项</a></li>
+	    <li><a href="../list_prior.html">按优先级排列</a></li>
+	    <li class="active"><a href="#">按过期时间排列</a></li>
+    </ul>
+    <div class="container">
+        {% for all_expire_day in all_expire_day_list %}
+            <div style="position: relative; width: 100%; border-bottom: 1px solid darkgray">
+                <p style="font-size: 15px; color: gray">过期于: {{ all_expire_day }}</p>
+            </div>
+            {% for to_do in to_do_list %}
+                {% if to_do.expire_date == all_expire_day %}
+                    <div style="border-bottom: 1px solid gray; padding: 2em; margin: 1em;">
+                        <p style="font-size: 12px; color: darkgray"><small>日期:{{ to_do.date }}</small></p>
+                        <p style="font-size: 18px">
+                            {% if to_do.is_finished == False %}
+                            <span class="badge">{{ to_do.prior }}</span>
+                            {% else %}
+                            <span class="badge" style="background-color: green">已完成</span>
+                            {% endif %}
+                            {{ to_do.content }}</p>
+                    <button type="button" class="btn btn-danger" onclick=window.location.href='delete{{ to_do.id }}'>删除</button>
+                    <button type="button" class="btn btn-info" onclick=window.location.href='edit{{ to_do.id }}'>编辑</button>
+                    {% if to_do.is_finished == False %}
+                        <button type="button" class="btn btn-success" onclick=window.location.href='complete{{ to_do.id }}'>完成</button>
+                    {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br>
+            <br>
+        {% endfor %}
+    </div>
+</body>
+</html>
