@@ -1,15 +1,15 @@
 # Pre-Work---Todo-List
 ToBeDone: A Todo List web APP
 
-已实现功能：
-·增加一个待办事项
-·删除一个待办事项
-·标记一个待办事项为已完成
-·编辑一个待办事项的具体内容
-·列出所有的待办事项
-·待办事项可以设置优先级
-·待办事项可以设置expire date
-·支持按照七天内、全部待办事项、按优先级、按过期时间四种方法排列待办事项
+已实现功能：<br>
+·增加一个待办事项<br>
+·删除一个待办事项<br>
+·标记一个待办事项为已完成<br>
+·编辑一个待办事项的具体内容<br>
+·列出所有的待办事项<br>
+·待办事项可以设置优先级<br>
+·待办事项可以设置expire date<br>
+·支持按照七天内、全部待办事项、按优先级、按过期时间四种方法排列待办事项<br>
 
 增加一个待办事项:
 ![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%B7%BB%E5%8A%A0%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9.gif)
