@@ -26,12 +26,12 @@ ToBeDone: A Todo List web APP
 列出所有的待办事项:
 ![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E5%88%97%E5%87%BA%E5%85%A8%E9%83%A8%E4%BA%8B%E9%A1%B9.gif)
 
-待办事项设置优先级:
-![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%B7%BB%E5%8A%A0%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9.gif)
-
-待办事项设置expire date:
+待办事项设置优先级和expire date:
 ![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%B7%BB%E5%8A%A0%E5%BE%85%E5%8A%9E%E4%BA%8B%E9%A1%B9.gif)
 
 待办事项默认按最近七天排列.
 待办事项按优先级排列:
 ![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E6%8E%92%E5%BA%8F.gif)
+
+待办事项按过期时间排列:
+![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%8C%89%E8%BF%87%E6%9C%9F%E6%97%B6%E9%97%B4%E6%8E%92%E5%BA%8F.gif)
