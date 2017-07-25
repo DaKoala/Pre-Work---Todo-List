@@ -35,7 +35,3 @@ ToBeDone: A Todo List web APP
 待办事项默认按最近七天排列.
 待办事项按优先级排列:
 ![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E6%8E%92%E5%BA%8F.gif)
-
-待办事项
-待办事项按
-![image](https://github.com/DaKoala/Pre-Work---Todo-List/blob/master/feature_gifs/%E6%8C%89%E4%BC%98%E5%85%88%E7%BA%A7%E6%8E%92%E5%BA%8F.gif)
